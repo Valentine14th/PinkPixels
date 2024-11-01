@@ -6,6 +6,7 @@ import './wall1.css';
 
 function Wall1() {
   return (
+
     <div>
       <h1>Wall1</h1>
 
@@ -66,6 +67,12 @@ function Wall1() {
           )
         }
       </Popup>
+
+    <div className="wall1-background">
+      <div className="wall1-content">
+        <h1>Wall1</h1>
+      </div>
+
     </div>
   );
 }
