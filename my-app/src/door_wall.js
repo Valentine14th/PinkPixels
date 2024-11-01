@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './door_wall.css';
 
 function DoorWall() {
   return (
-    <div>
-      <h1>DoorWall</h1>
+    <div className="doorwall-background">
+      <div className="doorwall-content">
+        <h1>DoorWall</h1>
+      </div>
     </div>
   );
 }
