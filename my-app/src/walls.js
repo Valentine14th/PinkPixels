@@ -9,19 +9,12 @@ import Wall1 from "./wall1.js";
 import './wall1.js';
 import Wall2 from "./wall2.js";
 import './wall2.js';
-import StartScreen from "./start_screen.js";
-import './start_screen.js';
 
+function Walls() {
 
-function App() {
-  const [content, setContent] = useState("This is the initial content");
   const screens = [<DoorWall />, <PosterWall />, <Wall1 />, <Wall2 />];
-  const [isStartScreen, setIsStartScreen] = useState(true);
-  const [currentScreenIndex, setCurrentScreenIndex] = useState(0);
 
-  const handleStart = () => {
-    setIsStartScreen(false);
-  };
+  const [currentScreenIndex, setCurrentScreenIndex] = useState(0);
 
   const handleLeftClick = () => {
     setCurrentScreenIndex((prevIndex) =>
@@ -37,27 +30,19 @@ function App() {
 
   return (
     <div className="App">
-      {isStartScreen ? (
-        <StartScreen onStart={handleStart} />
-      ) : (
-        <>
-          <button className="side-button left-button" onClick={handleLeftClick}>
-            &lt;
-          </button>
-
-          <div className="content">
-            {screens[currentScreenIndex]}
-          </div>
-
-          <button className="side-button right-button" onClick={handleRightClick}>
-            &gt;
-          </button>
-        </>
-      )}
+      <button className="side-button left-button" onClick={handleLeftClick}>
+        &lt;
+      </button>
+      <div className="content">
+        {screens[currentScreenIndex]}
+      </div>
+      <button className="side-button right-button" onClick={handleRightClick}>
+        &gt;
+      </button>
       {/* <SpotTheDifference /> */}
     </div>
   );
 }
 
 
-export default App;
+export default Walls;
