@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
 import './SpotTheDifference.css';
 
 const games = [
@@ -60,6 +62,24 @@ function SpotTheDifference() {
   return (
     <div className="main-container">
       <h1>Spot the Difference Games</h1>
+
+      <Popup trigger=
+        {<button> Pop Up </button>} 
+        modal nested>
+        {
+          close => (
+            <div className='modal'>
+              <button className='close' onClick={close}>
+                &times;
+              </button>
+              <div className='content'>
+                Spot the difference game
+              </div>
+            </div>
+          )
+        }
+      </Popup>
+
       <div className="buttons-container">
         {games.map((game) => (
           <button key={game.id} onClick={() => startGame(game)}>
