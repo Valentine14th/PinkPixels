@@ -32,12 +32,6 @@ function SpotTheDifference() {
   const [currentGame, setCurrentGame] = useState(null);
   const [foundDifferences, setFoundDifferences] = useState([]);
   const [score, setScore] = useState(0);
-  const [win, setWin] = useState({
-    game1: false,
-    game2: false,
-    game3: false,
-    game4: false,
-  });
 
   const startGame = (game) => {
     setCurrentGame(game);
@@ -93,16 +87,6 @@ function SpotTheDifference() {
             Start Game {game.id}
           </button>
         ))}
-        <DifferenceButtons 
-          id="game1" 
-          setWin={setWin}
-        />
-        <DifferenceButtons 
-          id="game2" 
-          setWin={setWin}
-        />
-        {win.game1 && <div>Game 1: You win!</div>}
-        {win.game2 && <div>Game 2: You win!</div>}
       </div>
 
       {currentGame && (

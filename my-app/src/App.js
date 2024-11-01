@@ -18,6 +18,12 @@ function App() {
   const screens = [<DoorWall />, <PosterWall />, <Wall1 />, <Wall2 />];
   const [isStartScreen, setIsStartScreen] = useState(true);
   const [currentScreenIndex, setCurrentScreenIndex] = useState(0);
+  const [win, setWin] = useState({
+    game1: false,
+    game2: false,
+    game3: false,
+    game4: false,
+  });
 
   const handleStart = () => {
     setIsStartScreen(false);
