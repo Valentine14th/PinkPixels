@@ -6,6 +6,7 @@ import './SpotTheDifference.css';
 
 function PosterWall() {
   return (
+
     <div>
       <h1>PosterWall</h1>
 
@@ -25,6 +26,12 @@ function PosterWall() {
           )
         }
       </Popup>
+
+    <div className="posterwall-background">
+      <div className="posterwall-content">
+        <h1>PosterWall</h1>
+      </div>
+
     </div>
   );
 }
