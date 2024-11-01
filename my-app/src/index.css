@@ -11,3 +11,37 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.content {
+  font-size: 1.5em;
+  text-align: center;
+  padding: 20px;
+}
+
+.side-button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  font-size: 2em;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.side-button:hover {
+  background-color: rgba(0, 0, 0, 0.5); /* Darker on hover */
+}
+
+.left-button {
+  left: 0;
+}
+
+.right-button {
+  right: 0;
+}
