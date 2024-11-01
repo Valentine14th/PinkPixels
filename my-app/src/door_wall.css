@@ -1,0 +1,16 @@
+/* DoorWall.css */
+.doorwall-background {
+    height: 100vh; /* Full viewport height */
+    background-image: url('assets/doorphoto.png'); /* Replace with the path to your image */
+    background-size: 80%; 
+    background-position: center;
+    background-color: gray;
+    background-repeat: no-repeat;
+  }
+  
+  .doorwall-content {
+    color: white;
+    text-align: center;
+    padding-top: 100px;
+  }
+  
