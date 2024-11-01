@@ -14,6 +14,7 @@ function DoorWall() {
       </div>
 
     </div>
+    </div>
   );
 }
 

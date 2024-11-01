@@ -68,6 +68,7 @@ function Wall2() {
       </div>
 
     </div>
+    </div>
   );
 }
 

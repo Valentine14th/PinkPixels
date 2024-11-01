@@ -33,6 +33,7 @@ function PosterWall() {
       </div>
 
     </div>
+    </div>
   );
 }
 
