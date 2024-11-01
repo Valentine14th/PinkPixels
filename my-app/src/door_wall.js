@@ -3,10 +3,16 @@ import './door_wall.css';
 
 function DoorWall() {
   return (
+
+    <div>
+      <h1>DoorWall</h1>
+      {<button className='popup-poster'> Door </button>} 
+
     <div className="doorwall-background">
       <div className="doorwall-content">
         <h1>DoorWall</h1>
       </div>
+
     </div>
   );
 }
