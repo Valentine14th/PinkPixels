@@ -1,7 +1,7 @@
 .wall1-background {
     height: 100vh; /* Full viewport height */
     background-image: url('assets/desk.png'); /* Replace with the path to your image */
-    background-size: 80%;
+    background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-color: gray;
