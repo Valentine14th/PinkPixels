@@ -10,7 +10,7 @@ function Wall1() {
       <h1>Wall1</h1>
 
       <Popup trigger=
-        {<button className='popup-phone image-button '> 
+        {<button className='popup-phone image-button'> 
           <img
               src='pic/phone.png'
               alt='Button Image 2'
