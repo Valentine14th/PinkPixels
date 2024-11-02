@@ -92,7 +92,7 @@
 
 .popup-phone {
   position: fixed;
-  top: 400px;  /* Adjust as needed */
+  top: 390px;  /* Adjust as needed */
   left: 770px; /* Adjust as needed */
   padding: 15px 30px;
   font-size: 18px;
@@ -105,7 +105,7 @@
 
 .popup-newspaper {
   position: fixed;
-  top: 450px;  /* Adjust as needed */
+  top: 420px;  /* Adjust as needed */
   left: 550px; /* Adjust as needed */
   padding: 15px 30px;
   font-size: 18px;
@@ -117,7 +117,7 @@
 
 .popup-tablet {
   position: fixed;
-  top: 500px;  /* Adjust as needed */
+  top: 480px;  /* Adjust as needed */
   left: 570px; /* Adjust as needed */
   padding: 15px 30px;
   font-size: 18px;
@@ -130,7 +130,7 @@
 
 .popup-computer {
   position: fixed;
-  top: 300px;  /* Adjust as needed */
+  top: 280px;  /* Adjust as needed */
   left: 600px; /* Adjust as needed */
   padding: 15px 30px;
   font-size: 18px;
