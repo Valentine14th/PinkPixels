@@ -11,11 +11,9 @@ import Wall2 from "./wall2.js";
 import './wall2.js';
 import StartScreen from "./start_screen.js";
 import './start_screen.js';
-import DifferenceButtons from "./DifferenceButtons.js";
 import './App.css'
 
 function App() {
-  const [content, setContent] = useState("This is the initial content");
   const [isStartScreen, setIsStartScreen] = useState(true);
   const [currentScreenIndex, setCurrentScreenIndex] = useState(0);
   const [win, setWin] = useState({
@@ -52,6 +50,12 @@ function App() {
   const handleReturnToStart = () => {
     setIsStartScreen(true);
     setCurrentScreenIndex(0); // Reset to the first screen if needed
+    setWin({
+      game_newspaper: false,
+      game_youtube: false,
+      game_insta: false,
+      game_picture: false,
+    })
   };
 
   return (

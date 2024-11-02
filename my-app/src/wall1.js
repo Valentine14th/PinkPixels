@@ -75,7 +75,6 @@ function Wall1({setWin}) {
 
     <div className="wall1-background">
       <div className="wall1-content">
-        <h1>Wall1</h1>
       </div>
 
     </div>

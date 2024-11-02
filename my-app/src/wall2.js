@@ -50,7 +50,6 @@ function Wall2({setWin}) {
 
     <div className="wall2-background">
       <div className="wall2-content">
-        <h1>Wall2</h1>
       </div>
 
     </div>

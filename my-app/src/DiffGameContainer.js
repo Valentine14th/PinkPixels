@@ -5,8 +5,8 @@ function DiffGameContainer({FakeImage, RealImage, setWin, id, numberOfDiffs, exp
   return (
     <div className='modal'>
       <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-        <h3>Finde die Unterschiede</h3>
-      </div>
+        <h3 style={{color: 'white',  backgroundColor: '#AF001D'}}>
+            -- Finde die Unterschied! -- </h3>  </div>
       <div  style={{ display: 'flex', justifyContent: 'top', gap: '10px'}}>
         <img
           src={FakeImage}
