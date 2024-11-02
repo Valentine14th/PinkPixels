@@ -9,7 +9,7 @@ import DiffGameContainer from './DiffGameContainer';
 
 function Wall2({setWin}) {
 
-  const explanationsTablet = {"difference1": "yeah that's weird", "difference2": "little lol", "difference3": "lmao"}
+  const explanationsTablet = {"difference1": "Überprüfe immer ob du die Website kennst, auf der du Informationen nachschaust. SRF ist eine bekannte, schweizer Nachrichtenseite. \"animal-shock.net\" hast du noch nie gehört und daher musst du vorsichtiger sein mit den Informationen, die du dort findest.", "difference2": "Es ist immer gut Informationen an zwei verschiedenen Orten nachzuschauen. Wenn du das mit Schildkröten tust, findest du heraus, dass sie gar nicht klettern können."}
 
   const displayTablet = () => {
     return (
