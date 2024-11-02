@@ -7,6 +7,7 @@ const differences = [
   { id: "difference2", buttons: ["diff2-1", "diff2-2"] },
   { id: "difference3", buttons: ["diff3-1", "diff3-2"] },
   { id: "difference4", buttons: ["diff4-1", "diff4-2"] },
+  { id: "difference5", buttons: ["diff5-1", "diff5-2"] },
 ];
 
 const SpotTheDifferenceButton = ({ buttonId, label, onSpotDifference, spottedDifferences, difference, finished, explanation, gameId, correct}) => {
