@@ -1,19 +1,92 @@
 /* DoorWall.css */
 .posterwall-background {
+    position: fixed; /* Fixes the background to the viewport */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full viewport width */
     height: 100vh; /* Full viewport height */
     background-image: url('assets/poster.png'); /* Replace with the path to your image */
-    background-size: 100%;
-    background-position: center;
+    background-size: contain; /* Ensures image fits within the screen without cropping */
+    background-position: center; /* Centers the background image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-color:gray;
+    background-color: gray; /* Adds black padding around the image on larger screens */
+    overflow: hidden; /* Prevents scrolling */
+    z-index: -1; /* Ensures the background is behind other content */
 
   }
   
   .posterwall-content {
+    position: fixed; /* Fixed position to prevent scrolling */
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the content */
+    width: 90%; /* Or a fixed width, e.g., 800px */
+    max-width: 800px;
+    padding: 20px;
     color: white;
     text-align: center;
     padding-top: 50px;
     padding-left: 50px;
     padding-right: 50px;
   }
+
+  .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    max-width: 260px; /* Slightly smaller container for a compact grid */
+    position: relative;
+    top: -50px; /* Adjust this value to shift it up */
+    left: 300px;
+    margin-top: 20px; /* Extra margin to ensure separation from the title */
+
+  }
   
+  .image-box {
+    width: 100px; /* Smaller width for each box */
+    height: 100px; /* Smaller height for each box */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px dashed rgba(255, 255, 255, 0.6); /* Dashed border with transparency */
+  }
+  
+  /* Styling for images to prevent zooming */
+  .poster-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+  
+  /* Styling for the black box when no image is available */
+  .black-box {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* More transparent black background */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em; /* Larger font for "?" */
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.3); /* Subtler, diffused shadow */
+  }
+  .child-handwriting {
+    font-family: 'Caveat', sans-serif; /* Use the handwriting font */
+    font-size: 2rem; /* Adjust size to your preference */
+    color: #333; /* Choose a color that complements the design */
+    text-align: center; /* Center it above the image */
+    margin-bottom: 10px; /* Add space below the heading */
+  }
+
+  .title-container {
+    margin-bottom: 60px; /* Space between heading and image */
+    text-align: center; /* Center it above the image */
+
+
+  }

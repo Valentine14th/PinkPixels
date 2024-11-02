@@ -12,21 +12,22 @@ import './wall2.js';
 import StartScreen from "./start_screen.js";
 import './start_screen.js';
 import DifferenceButtons from "./DifferenceButtons.js";
-
+import './App.css'
 
 function App() {
-  const [content, setContent] = useState("This is the initial content")
+  const [content, setContent] = useState("This is the initial content");
   const [isStartScreen, setIsStartScreen] = useState(true);
   const [currentScreenIndex, setCurrentScreenIndex] = useState(0);
   const [win, setWin] = useState({
-    game1: false,
-    game2: false,
-    game3: false,
-    game4: false,
+    game_newspaper: false,
+    game_youtube: false,
+    game_insta: false,
+    game_picture: false,
   });
+
   const screens = [
     <DoorWall win={win} />,
-    <PosterWall />,
+    <PosterWall win={win} />,  // Pass `win` as a prop here
     <Wall1 />,
     <Wall2 setWin={setWin}/>
   ];
@@ -47,6 +48,12 @@ function App() {
     );
   };
 
+  // Function to go back to the Start Screen
+  const handleReturnToStart = () => {
+    setIsStartScreen(true);
+    setCurrentScreenIndex(0); // Reset to the first screen if needed
+  };
+
   return (
     <div className="App">
       {isStartScreen ? (
@@ -64,12 +71,16 @@ function App() {
           <button className="side-button right-button" onClick={handleRightClick}>
             &gt;
           </button>
+
+          {/* Button to return to the Start Screen */}
+          <button className="return-to-start" onClick={handleReturnToStart} >
+            Start Over
+          </button>
         </>
       )}
-      {/* <SpotTheDifference /> */}
     </div>
   );
 }
 
-
 export default App;
+
