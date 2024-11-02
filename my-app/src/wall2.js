@@ -8,12 +8,13 @@ import RealArticle from './assets/diff_game_pics/newsarticle.png'
 import DiffGameContainer from './DiffGameContainer';
 
 function Wall2({setWin}) {
-
+ 
+  const [newsIsDone, setNewsIsDone] = useState(false);
   const explanationsTablet = {"difference1": "Überprüfe immer ob du die Website kennst, auf der du Informationen nachschaust. SRF ist eine bekannte, schweizer Nachrichtenseite. \"animal-shock.net\" hast du noch nie gehört und daher musst du vorsichtiger sein mit den Informationen, die du dort findest.", "difference2": "Es ist immer gut Informationen an zwei verschiedenen Orten nachzuschauen. Wenn du das mit Schildkröten tust, findest du heraus, dass sie gar nicht klettern können."}
 
   const displayTablet = () => {
     return (
-      <DiffGameContainer FakeImage={FakeArticle} RealImage={RealArticle} setWin={setWin} id={"game1"} numberOfDiffs={3} explanations={explanationsTablet} correctPicture={"left"}/>
+      <DiffGameContainer FakeImage={FakeArticle} RealImage={RealArticle} setWin={setWin} id={"game1"} numberOfDiffs={3} explanations={explanationsTablet} correctPicture={"right"}/>
     )
   }
 
@@ -23,6 +24,7 @@ function Wall2({setWin}) {
     <div>
       <Popup 
         trigger={<div className='invisible-button popup-tablet'></div>}
+        onOpen={() => {}}
         modal nested>
           {}
       </Popup>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './SpotTheDifference.css';
+import Popup from 'reactjs-popup';
 
 // Define pairs of button IDs representing differences
 const differences = [
@@ -11,10 +12,10 @@ const differences = [
 
 const SpotTheDifferenceButton = ({ buttonId, label, onSpotDifference, spottedDifferences, difference, finished, explanation, gameId, correct}) => {
   return (
-    finished ? (
-      (buttonId.slice(-1) == "1") ? <p>{explanation}</p> : null
-    )
-    :
+    // finished ? (
+    //   (buttonId.slice(-1) == "1") ? <p>{explanation}</p> : null
+    // )
+    // :
     (
       <button
         style={{ borderColor: spottedDifferences[difference.id] ? "red" : "transparent" }}
@@ -58,7 +59,8 @@ const DifferenceButtons = ({ id, setWin, numberOfDiffs, explanations, correctPic
 
   return (
     <>
-    {finish && (correct ? (<p> Congrats, you are right! </p>) : (<p>No, look closer!</p>))}
+    <>
+    {/* {finish && (correct ? (<p> Congrats, you are right! </p>) : (<p>No, look closer!</p>))} */}
     <div className="spot-the-difference-game">
       {differences.slice(0, numberOfDiffs).map((difference) =>
         difference.buttons.map((buttonId) => (
@@ -78,26 +80,41 @@ const DifferenceButtons = ({ id, setWin, numberOfDiffs, explanations, correctPic
         ))
       )}
     </div>
-   {(allFound && !finish) && (<div className="question-options">
-    <p> You found all differences! Which side to you think is a real news? </p>
-    <button onClick={() => {
+   {(allFound && !finish) && (
+    <>
+    <div className="question-options" style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+    <h3> Du hast alle Unterschiede gefunden! Welche Seite denkst du ist echt? </h3>
+    </div>
+    <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+    <button className={'button-correction'} style={{marginRight: "20px"}}  onClick={() => {
       if (correctPicture === "left"){
         setCorrect(true);
       }
       setFinish(true);
     }}>
-      Left Picture
+      Links
     </button>
-    <button onClick={() => {
+    <button className={'button-correction'} onClick={() => {
       if (correctPicture === "right"){
         setCorrect(true);
       }
       setFinish(true);
     }}>
-      Right Picture
+      Rechts
     </button>
-    </div>)
+    </div>
+    </>)
     }
+  </>
+  {/* <Popup open={finish} modal nested></Popup> */}
+  {finish && (<div style={{ padding: "20px", textAlign: "center" }}>
+      <div className="doorwall-content">
+      <div className="centered-container">
+      {correct ? (<h3> Das stimmt! </h3>) : (<h3>Nein, schau genauer hin</h3>)}
+      {Object.values(explanations).map((explanation) => (<p>{explanation}</p>))}
+      </div>
+    </div>
+    </div>)}
   </>
   );
 };
