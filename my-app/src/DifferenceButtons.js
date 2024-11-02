@@ -12,7 +12,16 @@ const differences = [
 const SpotTheDifferenceButton = ({ buttonId, label, onSpotDifference, spottedDifferences, difference, allFound, explanation, gameId}) => {
   return (
     allFound ? 
-    (<p> {explanation} </p>)
+    (<div>
+      <button
+        style={{ borderColor: spottedDifferences[difference.id] ? "red" : "transparent" }}
+        onClick={() => onSpotDifference(buttonId)}
+        // className="circle-button"
+        className={`circle-button ${gameId}-${buttonId}`}
+    >
+        {/* {label} */}
+      </button>
+      </div>) 
     :
     (
       <button

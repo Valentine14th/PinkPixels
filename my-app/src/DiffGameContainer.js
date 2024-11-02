@@ -4,11 +4,11 @@ import DifferenceButtons from './DifferenceButtons';
 function DiffGameContainer({FakeImage, RealImage, setWin, id, numberOfDiffs, explanations}) {
   return (
     <>
-    <div>
-    <h3>Finde die Unterschiede</h3>
-    </div>
     <div className='modal'>
-      <div  style={{ display: 'flex', justifyContent: 'center', gap: '10px'}}>
+      <div>
+        <h3>Finde die Unterschiede</h3>
+      </div>
+      <div  style={{ display: 'flex', justifyContent: 'top', gap: '10px'}}>
         <img
           src={FakeImage}
           alt='FakeImage'

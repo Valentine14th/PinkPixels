@@ -15,6 +15,20 @@
     cursor: pointer;
   }
 
+.exp-container {
+    position: absolute; /* Fixed to the viewport */
+    top: 600px;
+    left: 100px;
+    /* background-color: rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    border-radius: 8px; */
+    /* max-width: 90%; */
+    width: 500px; /* Adjust width as needed */
+    color: white; /* White text color for readability */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
 
 .popup-overlay {
   display: flex !important;
@@ -249,22 +263,22 @@
 /* difference game buttons always game_id-button_id*/
   .circle-button.game1-diff1-1 {
       position: absolute;
-      top: 78px;
-      left: 544px;
+      top: 99px;
+      left: 45px;
       transform: translate(-50%, -50%);
     }
 
   .circle-button.game1-diff1-2 {
       position: absolute;
-      top: 78px;
-      left: 45px;
+      top: 99px;
+      left: 540px;
       transform: translate(-50%, -50%);
     }
 
     .circle-button.game1-diff2-1 {
       position: absolute;
       width: 260px;
-      top: 127px;
+      top: 150px;
       left: 135px;
       transform: translate(-50%, -50%);
     }
@@ -272,7 +286,7 @@
     .circle-button.game1-diff2-2 {
       position: absolute;
       width: 260px;
-      top: 127px;
+      top: 150px;
       left: 625px;
       transform: translate(-50%, -50%);
     }
