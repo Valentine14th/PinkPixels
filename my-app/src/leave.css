@@ -12,3 +12,49 @@
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
+  .leave-button {
+    position: relative;
+    padding: 30px 60px;
+    font-size: 2.5em;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    transition: transform 0.5s ease-in-out;
+ 
+    border-radius: 10px; /* Rounded corners for the button itself */
+  }
+  
+  .leave-button::before {
+    content: '';
+    background: rgba(251, 255, 0, 0.855); /* Light color to give glow effect */
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+  }
+  
+  .leave-button:hover::before {
+    transform: translate(-50%, -50%) scale(1.1); /* Slight scale-up for effect */
+    opacity: 1;
+  }
+  
+  .leave-button:hover {
+    box-shadow: 0 0 30px 15px rgba(255, 179, 0, 0.5); /* Softer, diffused glow */
+  }
+  
+  .leave-button:hover::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120%;
+    height: 120%;
+    background: rgba(251, 255, 0, 0.6); /* Light color for glow */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.7;
+    box-shadow: 0 0 25px 15px rgba(255, 179, 0, 0.4); /* More diffused outer glow */
+    z-index: -2; /* Layer behind the main glow */
+  }

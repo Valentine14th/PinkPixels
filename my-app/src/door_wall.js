@@ -11,7 +11,7 @@ function DoorWall({win}) {
         <div className="doorwall-background">
             <div className="doorwall-content">
                 
-                <h1>DoorWall</h1>
+                <h1></h1>
                 <Leave win={win} setIsEnd={setIsEnd} />
             </div>
 
