@@ -11,12 +11,12 @@ function DiffGameContainer({FakeImage, RealImage, setWin, id, numberOfDiffs, exp
         <img
           src={FakeImage}
           alt='FakeImage'
-          style={{ width: '100%', height: 'auto'}}
+          style={{ width: '100%', height: '100%'}}
         />
         <img
           src={RealImage}
           alt='RealImage'
-          style={{ width: '100%', height: 'auto'}}
+          style={{ width: '100%', height: '100%'}}
         />
       </div>
       <DifferenceButtons id={id} setWin={setWin} numberOfDiffs={numberOfDiffs} explanations={explanations} correctPicture={correctPicture}/>
