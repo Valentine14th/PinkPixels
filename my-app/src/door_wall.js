@@ -5,7 +5,6 @@ function DoorWall() {
   return (
 
     <div>
-      <h1>DoorWall</h1>
       {<button className='popup-poster'> Door </button>} 
 
     <div className="doorwall-background">

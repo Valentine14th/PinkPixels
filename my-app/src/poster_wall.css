@@ -2,7 +2,7 @@
 .posterwall-background {
     height: 100vh; /* Full viewport height */
     background-image: url('assets/poster.png'); /* Replace with the path to your image */
-    background-size: 50%;
+    background-size: 100%;
     background-position: center;
     background-repeat: no-repeat; /* Prevents the image from repeating */
     background-color:gray;

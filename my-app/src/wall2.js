@@ -8,7 +8,7 @@ function Wall2() {
   return (
 
     <div>
-      <h1>Wall2</h1>
+
 
       <Popup trigger=
         {<button className='popup-tablet'> Tablet </button>} 

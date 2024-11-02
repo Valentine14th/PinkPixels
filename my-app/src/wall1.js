@@ -8,12 +8,11 @@ function Wall1() {
   return (
 
     <div>
-      <h1>Wall1</h1>
 
       <Popup trigger=
         {<button className='popup-phone image-button'> 
           <img
-              src='pic/phone.png'
+              src='assets/phone.png'
               alt='Button Image 2'
               className='button-image'
             />
