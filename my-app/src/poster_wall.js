@@ -8,7 +8,6 @@ function PosterWall() {
   return (
 
     <div>
-      <h1>PosterWall</h1>
 
       <Popup trigger=
         {<button className='popup-poster'> Poster </button>} 
@@ -32,6 +31,7 @@ function PosterWall() {
         <h1>PosterWall</h1>
       </div>
 
+    </div>
     </div>
   );
 }
