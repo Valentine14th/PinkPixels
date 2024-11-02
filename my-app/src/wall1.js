@@ -10,13 +10,7 @@ function Wall1() {
     <div>
 
       <Popup trigger=
-        {<button className='popup-phone image-button'> 
-          <img
-              src='assets/phone.png'
-              alt='Button Image 2'
-              className='button-image'
-            />
-        </button>} 
+        {<div className='invisible-button popup-phone'></div>}
         modal nested>
         {
           close => (
@@ -42,7 +36,7 @@ function Wall1() {
       </Popup>
 
       <Popup trigger=
-        {<button className='popup-newspaper'> Newspaper </button>} 
+        {<div className='invisible-button popup-newspaper'></div>}
         modal nested>
         {
           close => (
