@@ -29,7 +29,7 @@ function App() {
     <DoorWall win={win} />,
     <PosterWall win={win} />,  // Pass `win` as a prop here
     <Wall1 />,
-    <Wall2 />
+    <Wall2 setWin={setWin}/>
   ];
 
   const handleStart = () => {

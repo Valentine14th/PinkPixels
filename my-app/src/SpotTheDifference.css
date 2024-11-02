@@ -15,6 +15,20 @@
     cursor: pointer;
   }
 
+.exp-container {
+    position: absolute; /* Fixed to the viewport */
+    top: 600px;
+    left: 100px;
+    /* background-color: rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    border-radius: 8px; */
+    /* max-width: 90%; */
+    width: 500px; /* Adjust width as needed */
+    color: white; /* White text color for readability */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
 
 .popup-overlay {
   display: flex !important;
@@ -169,6 +183,17 @@
   box-shadow: 0 0 15px 5px rgba(255, 179, 0, 0.8);
 }
 
+/* Circle Button Styling */
+.circle-button {
+  width: 50px;               /* Adjust size as needed */
+  height: 50px;
+  border-radius: 50%;        /* Makes it circular */
+  background-color: transparent;
+  border: 2px solid transparent; /* No visible border initially */
+  cursor: pointer;
+  transition: border-color 0.3s ease; /* Smooth transition */
+}
+
 /* Style the image buttons */
 .image-button {
   background: transparent;
@@ -242,4 +267,55 @@
     font-size: 1.2em;
     margin: 10px 0;
   }
+
+
+/* difference game buttons always game_id-button_id*/
+  .circle-button.game1-diff1-1 {
+      position: absolute;
+      top: 99px;
+      left: 45px;
+      transform: translate(-50%, -50%);
+    }
+
+  .circle-button.game1-diff1-2 {
+      position: absolute;
+      top: 99px;
+      left: 540px;
+      transform: translate(-50%, -50%);
+    }
+
+    .circle-button.game1-diff2-1 {
+      position: absolute;
+      width: 260px;
+      top: 150px;
+      left: 135px;
+      transform: translate(-50%, -50%);
+    }
+
+    .circle-button.game1-diff2-2 {
+      position: absolute;
+      width: 260px;
+      top: 150px;
+      left: 625px;
+      transform: translate(-50%, -50%);
+    }
+
+    .circle-button.game1-diff3-1 {
+      position: absolute;
+      width: 490px;
+      height:90px;
+      top: 327px;
+      left: 245px;
+      transform: translate(-50%, -50%);
+    }
+
+    .circle-button.game1-diff3-2 {
+      position: absolute;
+      width: 490px;
+      height: 90px;;
+      top: 327px;
+      left: 745px;
+      transform: translate(-50%, -50%);
+    }
+
   
