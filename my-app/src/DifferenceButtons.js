@@ -9,13 +9,14 @@ const differences = [
   { id: "difference4", buttons: ["diff4-1", "diff4-2"] },
 ];
 
-const SpotTheDifferenceButton = ({ id, label, onSpotDifference}) => {
+const SpotTheDifferenceButton = ({ buttonId, label, onSpotDifference, gameId}) => {
   return (
     <button
-      onClick={() => onSpotDifference(id)}
-      className="circle-button"
+      onClick={() => onSpotDifference(buttonId)}
+      // className="circle-button"
+      className={`circle-button ${gameId}-${buttonId}`}
     >
-      {label}
+      {/* {label} */}
     </button>
   );
 };
@@ -49,9 +50,10 @@ const DifferenceButtons = ({ id, setWin, numberOfDiffs}) => {
         difference.buttons.map((buttonId) => (
           <SpotTheDifferenceButton
             key={buttonId}
-            id={buttonId}
+            buttonId={buttonId}
             label={buttonId}
-            class={`${id}-${buttonId}`}
+            gameId={id}
+            // className={`${id}-${buttonId}`}
             onSpotDifference={() => handleSpotDifference(difference.id)}
           />
         ))
