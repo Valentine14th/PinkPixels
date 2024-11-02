@@ -28,7 +28,7 @@ function App() {
   const screens = [
     <DoorWall win={win} />,
     <PosterWall win={win} />,  // Pass `win` as a prop here
-    <Wall1 />,
+    <Wall1 setWin={setWin}/>,
     <Wall2 setWin={setWin}/>
   ];
 
