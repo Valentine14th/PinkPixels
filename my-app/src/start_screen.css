@@ -1,0 +1,33 @@
+.start-background {
+    height: 100vh; /* Full viewport height */
+    background-image: url('assets/doorphoto.png'); /* Replace with the path to your image */
+    background-size: 100%; 
+    background-position: center;
+    background-color: gray;
+    background-repeat: no-repeat;
+  }
+  
+  .start-content {
+    color: white;
+    text-align: center;
+    padding-top: 100px;
+  }
+
+  .centered-container {
+    position: fixed; /* Fixed to the viewport */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the container */
+    background-color: rgba(0, 0, 0, 0.8); /* 80% black opacity */
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 90%;
+    width: 500px; /* Adjust width as needed */
+    color: white; /* White text color for readability */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  
+
+  

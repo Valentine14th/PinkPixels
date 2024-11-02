@@ -1,0 +1,15 @@
+.wall2-background {
+    height: 100vh; /* Full viewport height */
+    background-image: url('assets/desk.png'); /* Replace with the path to your image */
+    background-size: 120%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: gray;
+  }
+  
+  .wall2-content {
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+  }
+  

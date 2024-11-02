@@ -1,13 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './door_wall.css';
 import Leave from './leave';
 
 function DoorWall({win}) {
   const [isEnd, setIsEnd] = useState(false);
   return (
+
     <div>
-      <h1>DoorWall</h1>
-      <Leave win={win} setIsEnd={setIsEnd} />
+      {<button className='popup-poster'> Door </button>} 
+
+        <div className="doorwall-background">
+            <div className="doorwall-content">
+                <h1>DoorWall</h1>
+                <Leave win={win} setIsEnd={setIsEnd} />
+            </div>
+
+        </div>
     </div>
   );
 }
