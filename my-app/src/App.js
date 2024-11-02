@@ -11,11 +11,11 @@ import Wall2 from "./wall2.js";
 import './wall2.js';
 import StartScreen from "./start_screen.js";
 import './start_screen.js';
+import DifferenceButtons from "./DifferenceButtons.js";
 
 
 function App() {
-  const [content, setContent] = useState("This is the initial content");
-  const screens = [<DoorWall />, <PosterWall />, <Wall1 />, <Wall2 />];
+  const [content, setContent] = useState("This is the initial content")
   const [isStartScreen, setIsStartScreen] = useState(true);
   const [currentScreenIndex, setCurrentScreenIndex] = useState(0);
   const [win, setWin] = useState({
@@ -24,6 +24,12 @@ function App() {
     game3: false,
     game4: false,
   });
+  const screens = [
+    <DoorWall win={win} />,
+    <PosterWall />,
+    <Wall1 />,
+    <Wall2 />
+  ];
 
   const handleStart = () => {
     setIsStartScreen(false);
