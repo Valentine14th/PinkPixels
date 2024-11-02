@@ -7,7 +7,7 @@ function StartScreen({ onStart }) {
       <div className="doorwall-background">
       <div className="doorwall-content">
       <div className="centered-container">
-      <h1>Welcome to the App!</h1>
+      <h1>Real oder Fake: Finde die Fakten!</h1>
       <p>Hallo!
 Gerade haben deine Freunde geschrieben, dass sie sich gerne treffen wollen. Allerdings zwingt dich deinen Eltern zuerst noch dein Poster für deinen Vortrag fertig zu machen!
 Recherchiere mit den verschiedenen Geräten um mehr über Schildkröten zu erfahren!</p>
