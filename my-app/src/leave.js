@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './leave.css';
 
 
-function Leave({ win, setIsEnd }) {
+function Leave({ win, setIsEnd, isEnd }) {
   const [showMom, setShowMom] = useState(false);
 
   const handleLeave = () => {
@@ -12,8 +12,8 @@ function Leave({ win, setIsEnd }) {
     } else {
       setShowMom(true); // Show the "not completed" message
       setTimeout(() => {
-        setShowMom(false); // Hide the message after 3 seconds
-      }, 3000);
+        setShowMom(false); // Hide the message after 6 seconds
+      }, 6000);
     }
   };
 
@@ -41,8 +41,14 @@ function Leave({ win, setIsEnd }) {
 
       {showMom && (
         <div className="centered-container" style={{ marginTop: '20px' }}>
-          <p>Finish your homework!</p>
+          <p>"Hast du dein Poster fertig?" rufen deine Eltern. Leider nicht, also zurück an die Arbeit!
+          </p>
         </div>
+      )}
+      {isEnd && (
+        <div className="centered-container" style={{ marginTop: '20px' }}>
+        <p>Yay! Du hast dein Poster fertig gemacht! Endlich lassen dich deine Eltern aus dem Zimmer, damit du deine Freunde treffen kannst.</p>
+      </div>
       )}
     </div>
   );

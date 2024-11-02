@@ -12,7 +12,7 @@ function DoorWall({win}) {
             <div className="doorwall-content">
                 
                 <h1></h1>
-                <Leave win={win} setIsEnd={setIsEnd} />
+                <Leave win={win} setIsEnd={setIsEnd} isEnd={isEnd} />
             </div>
 
         </div>
