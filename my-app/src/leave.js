@@ -26,8 +26,14 @@ function Leave({win, setIsEnd}) {
     >
       Leave
     </button>
+    
+    
     {showMom && (
-        <p>Finish your homework!</p>
+        <div style={{ padding: "20px", textAlign: "center" }}>
+        <div className="centered-container">
+            <p>Finish your homework!</p>
+        </div>
+        </div>
       )}
       {!showMom && <p>Click the button to leave</p>}
     </div>

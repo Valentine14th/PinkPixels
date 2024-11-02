@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './door_wall.css';
 import Leave from './leave';
 
@@ -7,10 +7,10 @@ function DoorWall({win}) {
   return (
 
     <div>
-      {<button className='popup-poster'> Door </button>} 
 
         <div className="doorwall-background">
             <div className="doorwall-content">
+                
                 <h1>DoorWall</h1>
                 <Leave win={win} setIsEnd={setIsEnd} />
             </div>
