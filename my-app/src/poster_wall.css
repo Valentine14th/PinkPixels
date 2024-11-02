@@ -1,15 +1,28 @@
 /* DoorWall.css */
 .posterwall-background {
+    position: fixed; /* Fixes the background to the viewport */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full viewport width */
     height: 100vh; /* Full viewport height */
     background-image: url('assets/poster.png'); /* Replace with the path to your image */
-    background-size: 100%;
-    background-position: center;
+    background-size: contain; /* Ensures image fits within the screen without cropping */
+    background-position: center; /* Centers the background image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-color:gray;
+    background-color: gray; /* Adds black padding around the image on larger screens */
+    overflow: hidden; /* Prevents scrolling */
+    z-index: -1; /* Ensures the background is behind other content */
 
   }
   
   .posterwall-content {
+    position: fixed; /* Fixed position to prevent scrolling */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the content */
+    width: 90%; /* Or a fixed width, e.g., 800px */
+    max-width: 800px;
+    padding: 20px;
     color: white;
     text-align: center;
     padding-top: 50px;

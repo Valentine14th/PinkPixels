@@ -23,7 +23,7 @@ function Leave({ win, setIsEnd }) {
         onClick={handleLeave}
         className="leave-button"
         style={{
-          height: '410px', // Set a fixed height to increase vertical size
+          height: '420px', // Set a fixed height to increase vertical size
           width: '20px', // Optionally set a specific width as well
           fontSize: '2em',
           background: 'transparent',
@@ -32,7 +32,7 @@ function Leave({ win, setIsEnd }) {
           color: 'white',
           position: 'relative',
           outline: 'none',
-          marginTop: '70px',
+          marginTop: '10px',
           marginLeft :'80px'
         }}
       >
