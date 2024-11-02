@@ -1,13 +1,9 @@
 import React from 'react';
 import DifferenceButtons from './DifferenceButtons';
 
-function DiffGameContainer({FakeImage, RealImage, setWin, id, numberOfDiffs, explanations}) {
+function DiffGameContainer({FakeImage, RealImage, setWin, id, numberOfDiffs, explanations, correctPicture}) {
   return (
-    <>
-    <div>
-    <h3>Finde die Unterschiede</h3>
-    </div>
-    <div className='modal'>
+    <div className='modal' style={{overflowY: 'auto',}}>
       <div  style={{ display: 'flex', justifyContent: 'center', gap: '10px'}}>
         <img
           src={FakeImage}
@@ -20,9 +16,8 @@ function DiffGameContainer({FakeImage, RealImage, setWin, id, numberOfDiffs, exp
           style={{ width: '100%', height: 'auto' }}
         />
       </div>
-      <DifferenceButtons id={id} setWin={setWin} numberOfDiffs={numberOfDiffs} explanations={explanations}/>
+      <DifferenceButtons id={id} setWin={setWin} numberOfDiffs={numberOfDiffs} explanations={explanations} correctPicture={correctPicture}/>
     </div>
-    </>
 )
 }
 

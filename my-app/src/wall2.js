@@ -13,7 +13,7 @@ function Wall2({setWin}) {
 
   const displayTablet = () => {
     return (
-      <DiffGameContainer FakeImage={FakeArticle} RealImage={RealArticle} setWin={setWin} id={"game1"} numberOfDiffs={3} explanations={explanationsTablet}/>
+      <DiffGameContainer FakeImage={FakeArticle} RealImage={RealArticle} setWin={setWin} id={"game1"} numberOfDiffs={3} explanations={explanationsTablet} correctPicture={"left"}/>
     )
   }
 

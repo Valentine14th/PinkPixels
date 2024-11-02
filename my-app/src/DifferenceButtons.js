@@ -9,10 +9,11 @@ const differences = [
   { id: "difference4", buttons: ["diff4-1", "diff4-2"] },
 ];
 
-const SpotTheDifferenceButton = ({ buttonId, label, onSpotDifference, spottedDifferences, difference, allFound, explanation, gameId}) => {
+const SpotTheDifferenceButton = ({ buttonId, label, onSpotDifference, spottedDifferences, difference, finished, explanation, gameId, correct}) => {
   return (
-    allFound ? 
-    (<p> {explanation} </p>)
+    finished ? (
+      (buttonId.slice(-1) == "1") ? <p>{explanation}</p> : null
+    )
     :
     (
       <button
@@ -28,9 +29,11 @@ const SpotTheDifferenceButton = ({ buttonId, label, onSpotDifference, spottedDif
 };
 
 
-const DifferenceButtons = ({ id, setWin, numberOfDiffs, explanations}) => {
+const DifferenceButtons = ({ id, setWin, numberOfDiffs, explanations, correctPicture}) => {
   const [spottedDifferences, setSpottedDifferences] = useState({});
   const [allFound, setAllFound] = useState(false);
+  const [correct, setCorrect] = useState(false);
+  const [finish, setFinish] = useState(false);
 
   const handleSpotDifference = (differenceId) => {
     // Only update if the difference has not been spotted yet
@@ -54,6 +57,8 @@ const DifferenceButtons = ({ id, setWin, numberOfDiffs, explanations}) => {
   }, [spottedDifferences, id, setWin, numberOfDiffs]);
 
   return (
+    <>
+    {allFound && (correct ? (<p> Congrats, you are right! </p>) : (<p>No, look closer!</p>))}
     <div className="spot-the-difference-game">
       {differences.slice(0, numberOfDiffs).map((difference) =>
         difference.buttons.map((buttonId) => (
@@ -66,12 +71,34 @@ const DifferenceButtons = ({ id, setWin, numberOfDiffs, explanations}) => {
             onSpotDifference={() => handleSpotDifference(difference.id)}
             spottedDifferences={spottedDifferences}
             difference={difference}
-            allFound={allFound}
+            finished={finish}
             explanation={explanations[difference.id]}
+            correct={correct}
           />
         ))
       )}
     </div>
+   {(allFound && !finish) && (<div className="question-options">
+    <p> You found all differences! Which side to you think is a real news? </p>
+    <button onClick={() => {
+      if (correctPicture === "left"){
+        setCorrect(true);
+      }
+      setFinish(true);
+    }}>
+      Left Picture
+    </button>
+    <button onClick={() => {
+      if (correctPicture === "right"){
+        setCorrect(true);
+      }
+      setFinish(true);
+    }}>
+      Right Picture
+    </button>
+    </div>)
+    }
+  </>
   );
 };
 
