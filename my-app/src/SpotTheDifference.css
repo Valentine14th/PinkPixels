@@ -444,4 +444,65 @@
     }
 
 
-  
+    .circle-button.game_insta-diff1-1 {
+      position: absolute;
+      width: 75px;
+      top: 170px;
+      left: 225px;
+    }
+
+  .circle-button.game_insta-diff1-2 {
+      position: absolute;
+      width: 75px;
+      top: 170px;
+      left: 715px;
+    }
+
+    .circle-button.game_insta-diff2-1 {
+      position: absolute;
+      width: 75px;
+      height: 30px;
+      top: 295px;
+      left: 220px;
+    }
+
+    .circle-button.game_insta-diff2-2 {
+      position: absolute;
+      width: 75px;
+      height: 30px;
+      top: 295px;
+      left: 710px;
+    }
+
+    .circle-button.game_insta-diff3-1 {
+      position: absolute;
+      width: 75px;
+      height: 30px;
+      top: 345px;
+      left: 155px;
+    }
+
+    .circle-button.game_insta-diff3-2 {
+      position: absolute;
+      width: 75px;
+      height: 30px;
+      top: 345px;
+      left: 645px;
+    }
+
+    .circle-button.game_insta-diff4-1 {
+      position: absolute;
+      width: 75px;
+      height: 30px;
+      top: 77px;
+      left: 155px;
+    }
+
+    .circle-button.game_insta-diff4-2 {
+      position: absolute;
+      width: 75px;
+      height: 30px;
+      top: 77px;
+      left: 645px;
+    }
+ 

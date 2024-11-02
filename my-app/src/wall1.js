@@ -5,6 +5,8 @@ import './SpotTheDifference.css';
 import './wall1.css';
 import FakeArticle from './assets/diff_game_pics/fakenewsarticle2.png'
 import RealArticle from './assets/diff_game_pics/newsarticle.png'
+import FakePhone from './assets/diff_game_pics/fake_turtle_insta.jpg'
+import RealPhone from './assets/diff_game_pics/turtle_insta.jpg'
 import DiffGameContainer from './DiffGameContainer';
 
 function Wall1({setWin}) {
@@ -17,6 +19,14 @@ function Wall1({setWin}) {
     )
   }
 
+  const explanationsPhone = {"difference1": "Falls dir der Name des Instagramaccount unbekannt vorkommt oder nicht nach einer Firma klingt, die du kennst, kann es sein, dass die Informationen, die sie zeigen nicht stimmen. Vergleiche grundsätzlich die Informationen von Instagram immer mit der Informationen von anderen Orten."}
+
+  const displayPhone = () => {
+    return (
+      <DiffGameContainer FakeImage={RealPhone} RealImage={FakePhone} setWin={setWin} id={"game_insta"} numberOfDiffs={4} explanations={explanationsPhone} correctPicture={"right"}/>
+    )
+  }
+
   return (
 
     <div>
@@ -24,58 +34,17 @@ function Wall1({setWin}) {
       <Popup trigger=
         {<div className='invisible-button popup-phone'></div>}
         modal nested>
-        {
-          close => (
-            <div className='modal'>
-              <button className='close' onClick={close}>
-                &times;
-              </button>
-              <div className='image-container'>
-                <img
-                  src='path/to/your/image1.jpg'
-                  alt='Image 1'
-                  className='popup-image'
-                />
-                <img
-                  src='path/to/your/image2.jpg'
-                  alt='Image 2'
-                  className='popup-image'
-                />
-              </div>
-            </div>
-          )
-        }
+        {displayPhone}
       </Popup>
 
       <Popup trigger=
         {<div className='invisible-button popup-newspaper'></div>}
         modal nested>
         {displayArticle}
-          {/* close => (
-            <div className='modal'>
-              <button className='close' onClick={close}>
-                &times;
-              </button>
-              <div className='image-container'>
-                <img
-                  src='path/to/your/image1.jpg'
-                  alt='Image 1'
-                  className='popup-image'
-                />
-                <img
-                  src='path/to/your/image2.jpg'
-                  alt='Image 2'
-                  className='popup-image'
-                />
-              </div>
-            </div>
-          )
-        } */}
-      </Popup>
+    </Popup>
 
     <div className="wall1-background">
       <div className="wall1-content">
-        <h1>Wall1</h1>
       </div>
 
     </div>
