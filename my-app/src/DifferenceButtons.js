@@ -58,7 +58,7 @@ const DifferenceButtons = ({ id, setWin, numberOfDiffs, explanations, correctPic
 
   return (
     <>
-    {allFound && (correct ? (<p> Congrats, you are right! </p>) : (<p>No, look closer!</p>))}
+    {finish && (correct ? (<p> Congrats, you are right! </p>) : (<p>No, look closer!</p>))}
     <div className="spot-the-difference-game">
       {differences.slice(0, numberOfDiffs).map((difference) =>
         difference.buttons.map((buttonId) => (
