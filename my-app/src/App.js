@@ -28,7 +28,7 @@ function App() {
     <DoorWall win={win} />,
     <PosterWall />,
     <Wall1 />,
-    <Wall2 />
+    <Wall2 setWin={setWin}/>
   ];
 
   const handleStart = () => {

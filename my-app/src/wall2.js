@@ -7,11 +7,11 @@ import FakeArticle from './assets/diff_game_pics/fakenewsarticle2.png'
 import RealArticle from './assets/diff_game_pics/newsarticle.png'
 import DiffGameContainer from './DiffGameContainer';
 
-function Wall2() {
+function Wall2({setWin}) {
 
   const displayTablet = () => {
     return (
-      <DiffGameContainer FakeImage={FakeArticle} RealImage={RealArticle} />
+      <DiffGameContainer FakeImage={FakeArticle} RealImage={RealArticle} setWin={setWin} id={"game1"} numberOfDiffs={3}/>
     )
   }
 

@@ -1,24 +1,26 @@
 import React, { useState, useEffect } from 'react';
+import './SpotTheDifference.css';
 
 // Define pairs of button IDs representing differences
 const differences = [
-  { id: "difference1", buttons: ["button1", "button1-diff"] },
-  { id: "difference2", buttons: ["button2", "button2-diff"] },
-  // Add more pairs as needed
+  { id: "difference1", buttons: ["diff1-1", "diff1-2"] },
+  { id: "difference2", buttons: ["diff2-1", "diff2-2"] },
+  { id: "difference3", buttons: ["diff3-1", "diff3-2"] },
+  { id: "difference4", buttons: ["diff4-1", "diff4-2"] },
 ];
 
-const SpotTheDifferenceButton = ({ id, label, onSpotDifference }) => {
+const SpotTheDifferenceButton = ({ id, label, onSpotDifference}) => {
   return (
     <button
       onClick={() => onSpotDifference(id)}
-      className="spot-difference-button"
+      className="circle-button"
     >
       {label}
     </button>
   );
 };
 
-const DifferenceButtons = ({ id, setWin }) => {
+const DifferenceButtons = ({ id, setWin, numberOfDiffs}) => {
   const [spottedDifferences, setSpottedDifferences] = useState({});
 
   const handleSpotDifference = (differenceId) => {
@@ -33,22 +35,23 @@ const DifferenceButtons = ({ id, setWin }) => {
 
   useEffect(() => {
     // Check if all differences have been spotted
-    if (Object.keys(spottedDifferences).length === differences.length) {
+    if (Object.keys(spottedDifferences).length === numberOfDiffs) {
       setWin((prevIsWin) => ({
         ...prevIsWin,
         [id]: true,
       }));
     }
-  }, [spottedDifferences, id, setWin]);
+  }, [spottedDifferences, id, setWin, numberOfDiffs]);
 
   return (
     <div className="spot-the-difference-game">
-      {differences.map((difference) =>
+      {differences.slice(0, numberOfDiffs).map((difference) =>
         difference.buttons.map((buttonId) => (
           <SpotTheDifferenceButton
             key={buttonId}
             id={buttonId}
             label={buttonId}
+            class={`${id}-${buttonId}`}
             onSpotDifference={() => handleSpotDifference(difference.id)}
           />
         ))

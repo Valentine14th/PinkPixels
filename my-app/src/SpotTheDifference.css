@@ -160,6 +160,26 @@
   box-shadow: 0 0 15px 5px rgba(255, 179, 0, 0.8);
 }
 
+/* Circle Button Styling */
+.circle-button {
+  width: 50px;               /* Adjust size as needed */
+  height: 50px;
+  border-radius: 50%;        /* Makes it circular */
+  background-color: transparent;
+  border: 2px solid; /* No visible border initially */
+  cursor: pointer;
+  transition: border-color 0.3s ease; /* Smooth transition */
+}
+
+/* Red outline after being clicked */
+.circle-button:focus {
+  border-color: red;         /* Outline in red when clicked */
+}
+.circle-button:visited {
+  border-color: red;         /* Outline in red when clicked */
+}
+
+
 /* Style the image buttons */
 .image-button {
   background: transparent;

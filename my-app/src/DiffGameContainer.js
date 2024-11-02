@@ -1,7 +1,7 @@
 import React from 'react';
 import DifferenceButtons from './DifferenceButtons';
 
-function DiffGameContainer({FakeImage, RealImage}) {
+function DiffGameContainer({FakeImage, RealImage, setWin, id, numberOfDiffs}) {
   return (
     <div className='modal'>
       <div  style={{ display: 'flex', justifyContent: 'center', gap: '10px'}}>
@@ -16,7 +16,7 @@ function DiffGameContainer({FakeImage, RealImage}) {
           style={{ width: '100%', height: 'auto' }}
         />
       </div>
-      <DifferenceButtons />
+      <DifferenceButtons id={id} setWin={setWin} numberOfDiffs={numberOfDiffs}/>
     </div>
 )
 }
