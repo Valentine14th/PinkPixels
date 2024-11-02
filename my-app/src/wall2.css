@@ -2,9 +2,8 @@
     position: fixed; /* Fixes the background to the viewport */
     top: 0;
     left: 0;
-    width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full viewport height */
-    height: 100vh; /* Full viewport height */
+    height: 900px; /* Fixed height in pixels */
+    width: 1600px; /* Fixed width in pixels */
     background-image: url('assets/desk.png'); /* Replace with the path to your image */
     background-size: contain; /* Ensures image fits within the screen without cropping */
     background-position: center; /* Centers the background image */
