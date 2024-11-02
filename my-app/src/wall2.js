@@ -9,9 +9,11 @@ import DiffGameContainer from './DiffGameContainer';
 
 function Wall2({setWin}) {
 
+  const explanationsTablet = {"difference1": "yeah that's weird", "difference2": "little lol", "difference3": "lmao"}
+
   const displayTablet = () => {
     return (
-      <DiffGameContainer FakeImage={FakeArticle} RealImage={RealArticle} setWin={setWin} id={"game1"} numberOfDiffs={3}/>
+      <DiffGameContainer FakeImage={FakeArticle} RealImage={RealArticle} setWin={setWin} id={"game1"} numberOfDiffs={3} explanations={explanationsTablet}/>
     )
   }
 

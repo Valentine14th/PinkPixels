@@ -9,19 +9,27 @@ const differences = [
   { id: "difference4", buttons: ["diff4-1", "diff4-2"] },
 ];
 
-const SpotTheDifferenceButton = ({ id, label, onSpotDifference}) => {
+const SpotTheDifferenceButton = ({ id, label, onSpotDifference, spottedDifferences, difference, allFound, explanation}) => {
   return (
-    <button
-      onClick={() => onSpotDifference(id)}
-      className="circle-button"
-    >
-      {label}
-    </button>
+    allFound ? 
+    (<p> {explanation} </p>)
+    :
+    (
+      <button
+        style={{ borderColor: spottedDifferences[difference.id] ? "red" : "transparent" }}
+        onClick={() => onSpotDifference(id)}
+        className="circle-button"
+      >
+        {label}
+      </button>
+    ) 
   );
 };
 
-const DifferenceButtons = ({ id, setWin, numberOfDiffs}) => {
+
+const DifferenceButtons = ({ id, setWin, numberOfDiffs, explanations}) => {
   const [spottedDifferences, setSpottedDifferences] = useState({});
+  const [allFound, setAllFound] = useState(false);
 
   const handleSpotDifference = (differenceId) => {
     // Only update if the difference has not been spotted yet
@@ -40,6 +48,7 @@ const DifferenceButtons = ({ id, setWin, numberOfDiffs}) => {
         ...prevIsWin,
         [id]: true,
       }));
+      setAllFound(true);
     }
   }, [spottedDifferences, id, setWin, numberOfDiffs]);
 
@@ -51,8 +60,12 @@ const DifferenceButtons = ({ id, setWin, numberOfDiffs}) => {
             key={buttonId}
             id={buttonId}
             label={buttonId}
-            class={`${id}-${buttonId}`}
+            className={`${id}-${buttonId}`}
             onSpotDifference={() => handleSpotDifference(difference.id)}
+            spottedDifferences={spottedDifferences}
+            difference={difference}
+            allFound={allFound}
+            explanation={explanations[difference.id]}
           />
         ))
       )}

@@ -166,19 +166,10 @@
   height: 50px;
   border-radius: 50%;        /* Makes it circular */
   background-color: transparent;
-  border: 2px solid; /* No visible border initially */
+  border: 2px solid transparent; /* No visible border initially */
   cursor: pointer;
   transition: border-color 0.3s ease; /* Smooth transition */
 }
-
-/* Red outline after being clicked */
-.circle-button:focus {
-  border-color: red;         /* Outline in red when clicked */
-}
-.circle-button:visited {
-  border-color: red;         /* Outline in red when clicked */
-}
-
 
 /* Style the image buttons */
 .image-button {
