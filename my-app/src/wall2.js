@@ -11,7 +11,7 @@ function Wall2() {
 
 
       <Popup trigger=
-        {<button className='popup-tablet'> Tablet </button>} 
+        {<div className='invisible-button popup-tablet'></div>}
         modal nested>
         {
           close => (
@@ -37,7 +37,7 @@ function Wall2() {
       </Popup>
 
       <Popup trigger=
-        {<button className='popup-computer'> Computer </button>} 
+        {<div className='invisible-button popup-computer'></div>}
         modal nested>
         {
           close => (

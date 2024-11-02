@@ -92,8 +92,8 @@
 
 .popup-phone {
   position: relative;
-  top: 400px;  /* Adjust as needed */
-  left: -150px; /* Adjust as needed */
+  top: 750px;  /* Adjust as needed */
+  left: 220px; /* Adjust as needed */
   padding: 15px 30px;
   font-size: 18px;
   cursor: pointer;
@@ -105,8 +105,8 @@
 
 .popup-newspaper {
   position: relative;
-  top: 350px;  /* Adjust as needed */
-  left: 200px; /* Adjust as needed */
+  top: 800px;  /* Adjust as needed */
+  left: -200px; /* Adjust as needed */
   padding: 15px 30px;
   font-size: 18px;
   cursor: pointer;
@@ -117,8 +117,8 @@
 
 .popup-tablet {
   position: relative;
-  top: 500px;  /* Adjust as needed */
-  left: -250px; /* Adjust as needed */
+  top: 900px;  /* Adjust as needed */
+  left: -150px; /* Adjust as needed */
   padding: 15px 30px;
   font-size: 18px;
   cursor: pointer;
@@ -130,14 +130,34 @@
 
 .popup-computer {
   position: relative;
-  top: 250px;  /* Adjust as needed */
-  left: 300px; /* Adjust as needed */
+  top: 500px;  /* Adjust as needed */
+  left: -100px; /* Adjust as needed */
   padding: 15px 30px;
   font-size: 18px;
   cursor: pointer;
   border: none;
   border-radius: 5px;
   outline: none;
+}
+
+
+.invisible-button::before {
+  content: '';
+  background: rgba(251, 255, 0, 0.855); /* Light color to give glow effect */
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.invisible-button:hover {
+  transform: scale(6);
+}
+
+.invisible-button:hover::before {
+  transform: translate(-50%, -50%) scale(1.5);
+  opacity: 1;
+  box-shadow: 0 0 15px 5px rgba(255, 179, 0, 0.8);
 }
 
 /* Style the image buttons */
