@@ -3,7 +3,6 @@ import DifferenceButtons from './DifferenceButtons';
 
 function DiffGameContainer({FakeImage, RealImage, setWin, id, numberOfDiffs, explanations, correctPicture}) {
   return (
-    <>
     <div className='modal'>
       <div>
         <h3>Finde die Unterschiede</h3>
