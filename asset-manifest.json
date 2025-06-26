@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/PinkPixels/static/css/main.79bcac5f.css",
+    "main.js": "/PinkPixels/static/js/main.a796b9d0.js",
+    "static/js/453.ed3810f9.chunk.js": "/PinkPixels/static/js/453.ed3810f9.chunk.js",
+    "static/media/turtle_video.png": "/PinkPixels/static/media/turtle_video.828bf02e1dd8ba0bf576.png",
+    "static/media/turtle_video_fake.png": "/PinkPixels/static/media/turtle_video_fake.d4041e497c2fecd6af5d.png",
+    "static/media/bed.png": "/PinkPixels/static/media/bed.8a21a1a431225234000c.png",
+    "static/media/desk.png": "/PinkPixels/static/media/desk.4acb234f3e69ab405bbe.png",
+    "static/media/newspaper_poster.png": "/PinkPixels/static/media/newspaper_poster.9643f0f9f7a3b58202a6.png",
+    "static/media/doorphoto.png": "/PinkPixels/static/media/doorphoto.27e002de17fb99de146a.png",
+    "static/media/fake_turtle_photo.png": "/PinkPixels/static/media/fake_turtle_photo.9c4c9ae4f9a7362b082f.png",
+    "static/media/instapost_poster.png": "/PinkPixels/static/media/instapost_poster.a24def32ff4fe4578574.png",
+    "static/media/poster.png": "/PinkPixels/static/media/poster.37a1bea6e5216e52f024.png",
+    "static/media/turtle_insta.jpg": "/PinkPixels/static/media/turtle_insta.72987e0b29858be8bcf5.jpg",
+    "static/media/fakenewsarticle2.png": "/PinkPixels/static/media/fakenewsarticle2.f835460c23b4cbd8c150.png",
+    "static/media/fake_turtle_insta.jpg": "/PinkPixels/static/media/fake_turtle_insta.7ab281efc2623555fa89.jpg",
+    "static/media/newsarticle.png": "/PinkPixels/static/media/newsarticle.333fccb660ee0970a047.png",
+    "static/media/turtle_photo.jpeg": "/PinkPixels/static/media/turtle_photo.3f52bafaced3c2ac76c6.jpeg",
+    "static/media/youtube_poster.png": "/PinkPixels/static/media/youtube_poster.246c435cec552d9f7872.png",
+    "index.html": "/PinkPixels/index.html",
+    "main.79bcac5f.css.map": "/PinkPixels/static/css/main.79bcac5f.css.map",
+    "main.a796b9d0.js.map": "/PinkPixels/static/js/main.a796b9d0.js.map",
+    "453.ed3810f9.chunk.js.map": "/PinkPixels/static/js/453.ed3810f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.79bcac5f.css",
+    "static/js/main.a796b9d0.js"
+  ]
+}
