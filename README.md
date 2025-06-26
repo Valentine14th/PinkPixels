@@ -14,9 +14,13 @@ In this game, a child is "trapped" in their room until they complete research fo
 
 ![alt text](room.png)
 
-*Disclaimer: This game was developped in German to cater to swiss-german children*.* 
+*Disclaimer: This game was developped in German to cater to swiss-german children*.*
 
-*Disclaimer 2: The game is optimized for a 14'' display, and is not fully adaptable to other display sizes yet.
+*Disclaimer 2: The game is optimized for a 14'' display, and is not fully adaptable to other display sizes yet.*
+
+
+
+** *Made by the the PinkPixels team* **
 
 
 ## Available Scripts
@@ -42,4 +46,5 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
+
 
