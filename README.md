@@ -1,3 +1,14 @@
+# Find our game!
+
+You can play a demo version of our game at the follwoing address: 
+
+https://valentine14th.github.io/PinkPixels/
+
+*Disclaimer: This game was developped in German to cater to swiss-german children*.
+
+*Disclaimer 2: The game is optimized for a 14'' display, and is not fully adaptable to other display sizes yet.*
+
+
 # Find the Facts
 
 This project, developped during the **2024 #herHack hackathon**, was selected by **SRG-SSR, the national swiss media coroporation**, as a **finalist and one of the top 2 submissions** for the media literacy challenge, based on its strong alignment with the challenge requirements, particularly its suitability for the target age group and context, as well as the quality of the minimum viable product. 
@@ -13,10 +24,6 @@ Our goal was to make the learning process engaging and accessible by gamifying i
 In this game, a child is "trapped" in their room until they complete research for a school poster on turtles. Their parents won’t let them out until the task is done. To gather the necessary information, the player explores the room, interacting with various media elements. The challenge is to distinguish trustworthy sources (such as those from SRG) from fake news and misleading content. Once all reliable information has been collected, the child is free to go play with his friends!
 
 ![alt text](room.png)
-
-*Disclaimer: This game was developped in German to cater to swiss-german children*.*
-
-*Disclaimer 2: The game is optimized for a 14'' display, and is not fully adaptable to other display sizes yet.*
 
 
 
